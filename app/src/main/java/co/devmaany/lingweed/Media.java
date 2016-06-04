@@ -1,11 +1,17 @@
 package co.devmaany.lingweed;
 
+import com.j256.ormlite.field.DataType;
+import com.j256.ormlite.field.DatabaseField;
+
 /**
  * Created by devmaany on 4/6/16.
  */
 public class Media {
+    @DatabaseField(generatedId = true)
     private Integer id;
+    @DatabaseField(foreign = true,foreignAutoRefresh = true)
     private Word word;
+    @DatabaseField(dataType = DataType.ENUM_STRING)
     private MediaType type;
     private String resource;
 

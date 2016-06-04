@@ -12,4 +12,7 @@ public interface WordDAO {
     List<Word> getAll();
     Word getById(Integer id);
     Word deleteLesson(Word word);
+    Word findByName(String name);
+    Word findByMeaning(String meaning);
+    Word findByLink(String linkSentence);
 }

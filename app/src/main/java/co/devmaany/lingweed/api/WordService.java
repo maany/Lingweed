@@ -1,4 +1,4 @@
-package co.devmaany.lingweed.api.net;
+package co.devmaany.lingweed.api;
 
 import java.util.List;
 
@@ -12,4 +12,7 @@ public interface WordService {
     List<Word> getAll();
     Word getById(Integer id);
     Word deleteLesson(Word word);
+    Word findByName(String name);
+    Word findByMeaning(String meaning);
+    Word findByLink(String linkSentence);
 }

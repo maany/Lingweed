@@ -1,19 +1,28 @@
 package co.devmaany.lingweed;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
+
 import java.util.List;
 
 /**
  * Created by devmaany on 4/6/16.
  */
 public class WordEssence {
+    @DatabaseField(generatedId = true)
     private Integer id;
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Word word;
     private String meaning;
     private String linkSentence;
+    @ForeignCollectionField
     private List<String> usages;
+    @ForeignCollectionField(columnName = "link_media",eager = true)
     private List<Media> linkMedia;
+    @ForeignCollectionField
     private WordFamily family;
-    private WordEssence Antonym;
+    @DatabaseField(foreign = true,foreignAutoRefresh = true)
+    private WordEssence antonym;
 
     public Integer getId() {
         return id;
@@ -72,10 +81,10 @@ public class WordEssence {
     }
 
     public WordEssence getAntonym() {
-        return Antonym;
+        return antonym;
     }
 
     public void setAntonym(WordEssence antonym) {
-        Antonym = antonym;
+        this.antonym = antonym;
     }
 }

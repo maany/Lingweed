@@ -1,14 +1,19 @@
 package co.devmaany.lingweed;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
+
 import java.util.List;
 
 /**
  * Created by devmaany on 4/6/16.
  */
 public class Lesson {
+    @DatabaseField(generatedId = true)
     private Integer id;
     private String name;
     private String description;
+    @ForeignCollectionField()
     private List<Word> words;
 
 
