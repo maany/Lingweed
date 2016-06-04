@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="co.devmaany.lingweed.dashboard"
+    tools:context=".view.Dashboard"
     tools:showIn="@layout/app_bar_dashboard">
 
     <TextView
@@ -18,22 +18,6 @@
         android:text="Hello World!"
         android:id="@+id/textView2" />
 
-    <FrameLayout
-        android:layout_width="@dimen/activity_horizontal_margin"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"></FrameLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package co.devmaany.lingweed;
+package co.devmaany.lingweed.view;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,7 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class dashboard extends AppCompatActivity
+import co.devmaany.lingweed.R;
+
+public class Dashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
